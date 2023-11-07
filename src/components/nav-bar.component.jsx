@@ -3,29 +3,30 @@ import CartWidget from "./cart-widget.component";
 import LogoIcon from "../assets/logo.png";
 import CloseIcon from "../assets/close.svg";
 import MenuIcon from "../assets/menu.svg";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <nav className="nav" id="nav">
-      <a href="./index.html" className="nav-logo">
+      <Link to="/" className="nav-logo">
         <img src={LogoIcon} alt="Logo de la pagina" className="logo" />
         <h2>Tienda </h2>
-      </a>
+      </Link>
       <ul className="nav-links">
         <li className="nav-item">
-          <a href="./index.html" className="nav-link">
+          <Link to="/" className="nav-link">
             Inicio
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a href="#" className="nav-link">
+          <Link to="/productos" className="nav-link">
             Productos
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a href="#" className="nav-link">
+          <Link to="/" className="nav-link">
             Contacto
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
           <CartWidget />
