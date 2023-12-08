@@ -1,0 +1,21 @@
+.cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: black;
+}
+.cartSpan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    color: white;
+    border-radius: 50%;
+    background-color: #194f7d;
+    padding: 2px;
+    line-height: 1.5em;
+}

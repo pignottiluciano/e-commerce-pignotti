@@ -6,4 +6,7 @@ export default defineConfig({
   preprocessors: {
     "*.scss": ["sass"],
   },
+  loader: {
+    ".js": "jsx",
+  },
 });

@@ -1,0 +1,48 @@
+.container {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  border-radius: 5px;
+  background-color: #2d2d2d64;
+  padding: 10px;
+}
+.stock {
+  font-size: 12px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+.containerCount {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+}
+.button {
+  width: 20%;
+  padding: 5px 10px 5px 10px;
+  color: #000;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: center;
+  height: 25px;
+  cursor: pointer;
+}
+.count {
+  padding: 5px;
+  font-weight: bold;
+}
+.buttonAdd {
+  width: 100%;
+  height: 35px;
+  padding: 5px 0 5px 0;
+  margin-top: 5px;
+  border: 0;
+  border-radius: 5px;
+  color: black;
+  background-color: #fff;
+  cursor: pointer;
+}
