@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function homeContainer() {
   return (
     <div>
-      <section>
+      <section className={styles.section}>
         <CarouselComponent />
       </section>
     </div>
