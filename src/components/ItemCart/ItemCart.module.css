@@ -28,7 +28,7 @@ span {
   color: white;
 }
 .information {
-  width: 50%;
+  width: 40%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,7 +44,7 @@ span {
   cursor: pointer;
 }
 .titleWithouStock {
-  width: 60%;
+  width: 20%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -62,11 +62,11 @@ span {
   color: red !important;
 }
 .price {
-  width: 10%;
+  width: 14%;
   overflow: hidden;
 }
 .totalPrice {
-  width: 10%;
+  width: 14%;
   overflow: hidden;
 }
 .removeButton {
