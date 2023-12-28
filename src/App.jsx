@@ -19,6 +19,10 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/productos" element={<ItemListContainer />} />
               <Route
+                path="/productos/:idCategory"
+                element={<ItemListContainer />}
+              />
+              <Route
                 path="/item/:idProduct"
                 element={<ItemDetailContainer />}
               />
@@ -26,7 +30,7 @@ function App() {
             </Routes>
           </section>
 
-          <Footer />
+          <Footer className="footer" />
         </CustomProvider>
       </BrowserRouter>
     </div>

@@ -1,14 +1,15 @@
-import Carousel from "../Carousel";
+import CarouselComponent from "../Carousel";
+import styles from "./home.module.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function ItemListContainer() {
+function homeContainer() {
   return (
     <div>
-      <h1>Bienvenidos a Lucho Ecommerce</h1>
       <section>
-        <Carousel />
+        <CarouselComponent />
       </section>
     </div>
   );
 }
 
-export default ItemListContainer;
+export default homeContainer;

@@ -5,11 +5,11 @@ import styles from "./ItemCart.module.css";
 
 const ItemCart = ({ item, removeItem }) => {
   return (
-    <div className={styles.itemCart}>
-      <div className={styles.imgContainer}>
+    <tr className={styles.itemCart}>
+      <td className={styles.imgContainer}>
         <img className={styles.image} src={item.image} alt={item.title} />
-      </div>
-      <div className={styles.information}>
+      </td>
+      <td className={styles.information}>
         <Link to={"/item/" + item.id} className={styles.title}>
           <span
             className={
@@ -21,6 +21,8 @@ const ItemCart = ({ item, removeItem }) => {
             {item.title}
           </span>
         </Link>
+      </td>
+      <td className={styles.quantity}>
         <span
           className={
             item.stock < item.quantity
@@ -30,29 +32,24 @@ const ItemCart = ({ item, removeItem }) => {
         >
           {item.quantity}
         </span>
-        <span className={styles.price}>${item.price.toFixed(2)}</span>
-        <span className={styles.totalPrice}>
-          ${(item.price * item.quantity).toFixed(2)}
-        </span>
-        <div className={styles.removeButton}>
-          <button className={styles.remove} onClick={() => removeItem(item.id)}>
-            <DeleteIcon />
-          </button>
-        </div>
-      </div>
-    </div>
+      </td>
+      <td className={styles.price}>
+        <span>${item.price.toFixed(2)}</span>
+      </td>
+      <td className={styles.totalPrice}>
+        <span>${(item.price * item.quantity).toFixed(2)}</span>
+      </td>
+      <td className={styles.removeButton}>
+        <button className={styles.remove} onClick={() => removeItem(item.id)}>
+          <DeleteIcon />
+        </button>
+      </td>
+    </tr>
   );
 };
 
 ItemCart.propTypes = {
-  item: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
-    quantity: PropTypes.number.isRequired,
-    price: PropTypes.number.isRequired,
-    stock: PropTypes.number.isRequired,
-  }).isRequired,
+  item: PropTypes.object.isRequired,
   removeItem: PropTypes.func.isRequired,
 };
 

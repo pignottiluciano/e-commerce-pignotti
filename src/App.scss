@@ -48,6 +48,34 @@
     height: 8vh;
   }
   .section {
-    height: 92vh;
+    height: 90vh;
+  }
+  .footer {
+    height: 2vh;
+  }
+  @media (max-width: 1024px) {
+    height: 100%;
+    .header {
+      height: 8%;
+    }
+    .section {
+      min-height: 70vh;
+      height: 90%;
+    }
+    .footer {
+      height: 2%;
+    }
+  }
+  @media (max-width: 768px) {
+    height: 100%;
+    .header {
+      height: 8%;
+    }
+    .section {
+      height: 90%;
+    }
+    .footer {
+      height: 2%;
+    }
   }
 }

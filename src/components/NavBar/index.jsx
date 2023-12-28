@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import logo from "../../assets/logo.png";
-import CloseIcon from "../../assets/close.svg";
-import MenuIcon from "../../assets/menu.svg";
 import CartWidget from "../CartWidget";
 import { Link } from "react-router-dom";
 import { db } from "../../firabase/firebase";
@@ -26,7 +24,7 @@ function NavBar() {
   }, []);
 
   return (
-    <nav className="nav" id="nav">
+    <nav className="side-nav" id="nav">
       <Link to="/" className="nav-logo">
         <img src={logo} alt="Logo de la pagina" className="logo" />
         <h2>Tienda </h2>
@@ -46,14 +44,6 @@ function NavBar() {
           <CartWidget />
         </li>
       </ul>
-
-      <a href="#nav" className="nav-hamburguer">
-        <img src={MenuIcon} className="nav-icon" />
-      </a>
-
-      <a href="#" className="nav-close">
-        <img src={CloseIcon} className="nav-icon" />
-      </a>
     </nav>
   );
 }

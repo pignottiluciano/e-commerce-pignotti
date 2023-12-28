@@ -12,7 +12,7 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import swal from "sweetalert";
-import styles from "./Cart.module.css";
+import "./cart-products.scss";
 
 const Cart = () => {
   const { products, removeItem, getTotal, clear, updateStock } =
@@ -108,64 +108,59 @@ const Cart = () => {
   return (
     <>
       {products.length > 0 && (
-        <div className={styles.container}>
-          <div className={styles.cartContainer}>
+        <div className="container">
+          <div className="cartContainer">
             <h2>Productos</h2>
-            <div className={styles.detailContainer}>
-              <div>Cant</div>
-              <div>$ Unidad</div>
-              <div>Total</div>
-            </div>
-            {products.map((product) => {
-              return (
+            <table className="productTable">
+              {products.map((product) => (
                 <ItemCart
                   key={product.id}
                   item={product}
                   removeItem={removeItem}
                 />
-              );
-            })}
-            <div className={styles.total}>Total: ${getTotal().toFixed(2)}</div>
+              ))}
+            </table>
+            <div className="total">Total: ${getTotal().toFixed(2)}</div>
           </div>
-          <div className={styles.datosUsuario}>
+          <div className="datosUsuario">
             <h2>Finalizar compra</h2>
             <form onSubmit={(e) => handleSubmit(e)}>
               <input
-                className={styles.inputForm}
+                className="inputForm"
                 type="text"
                 name="name"
                 placeholder="Nombre"
                 required
               />
               <input
-                className={styles.inputForm}
+                className="inputForm"
                 type="text"
                 name="lastname"
                 placeholder="Apellido"
                 required
               />
               <input
-                className={styles.inputForm}
+                className="inputForm"
                 type="email"
                 name="email"
                 placeholder="Email"
                 required
               />
               <input
-                className={styles.inputForm}
+                className="inputForm"
                 type="email"
                 name="confirmar-email"
                 placeholder="Confirmar email"
                 required
               />
               <input
-                className={styles.inputForm}
+                className="inputForm"
                 type="phone"
                 name="phone"
                 placeholder="Telefono"
                 required
               />
-              <button className={styles.buttonForm} type="submit">
+              <button className="buttonForm" type="submit">
                 Confirmar compra
               </button>
             </form>
@@ -174,9 +169,9 @@ const Cart = () => {
       )}
 
       {products.length === 0 && (
-        <div className={styles.noProducts}>
+        <div className="noProducts">
           <span>No hay articulos en el carrito.</span>
-          <Link to="/" className={styles.irTienda}>
+          <Link to="/" className="irTienda">
             <span>Ir a la tienda</span>
           </Link>
         </div>
