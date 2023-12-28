@@ -13,7 +13,9 @@ function App() {
     <div className="app">
       <BrowserRouter>
         <CustomProvider>
-          <NavBar />
+          <header className="header">
+            <NavBar />
+          </header>
           <section className="section">
             <Routes>
               <Route path="/" element={<Home />} />
@@ -29,8 +31,9 @@ function App() {
               <Route path="/cart" element={<Cart />} />
             </Routes>
           </section>
-
-          <Footer className="footer" />
+          <footer className="footer">
+            <span>Sitio desarrollado por Luciano Pignotti.</span>
+          </footer>
         </CustomProvider>
       </BrowserRouter>
     </div>
